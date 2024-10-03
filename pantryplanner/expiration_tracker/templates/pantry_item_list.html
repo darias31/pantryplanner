@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pantry Items</title>
+</head>
+<body>
+    <h1>Pantry Items</h1>
+    <ul>
+    {% for item in pantry_items %}
+        <li>{{ item.item_type }} - {{ item.brand }} (Expires: {{ item.expiration_date }})</li>
+    {% empty %}
+        <li>No pantry items available.</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
